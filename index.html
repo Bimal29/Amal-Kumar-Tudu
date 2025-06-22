@@ -1,75 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Amal Kumar Tudu</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
       background-color: #0e0e0e;
       color: #fff;
+      scroll-behavior: smooth;
     }
+
     header {
       background: #1f1f1f;
       padding: 20px;
       text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
     }
+
     header h1 {
       margin: 0;
       font-size: 2.5em;
       color: #facc15;
     }
+
     nav {
       display: flex;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
       margin-top: 10px;
     }
+
     nav a {
       text-decoration: none;
       color: #ccc;
-      transition: color 0.3s;
+      font-weight: 500;
+      transition: all 0.3s;
     }
+
     nav a:hover {
       color: #facc15;
+      transform: scale(1.05);
     }
+
     .section {
-      padding: 40px 20px;
+      padding: 50px 20px;
       max-width: 1000px;
       margin: auto;
     }
+
     .section h2 {
       color: #facc15;
       border-bottom: 1px solid #444;
       padding-bottom: 10px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
+      font-size: 1.8em;
     }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
+
     .gallery img {
       width: 100%;
       border-radius: 12px;
+      transition: transform 0.3s;
     }
+
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+
     .videos iframe {
       width: 100%;
       height: 250px;
       border-radius: 12px;
+      transition: transform 0.3s;
     }
+
+    .videos iframe:hover {
+      transform: scale(1.02);
+    }
+
+    #about p {
+      line-height: 1.8;
+      margin-bottom: 30px;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .skill-badge {
+      background: #1f1f1f;
+      padding: 10px 20px;
+      border-radius: 30px;
+      color: #facc15;
+      font-weight: 500;
+      border: 1px solid #facc15;
+      transition: all 0.3s;
+    }
+
+    .skill-badge:hover {
+      background: #facc15;
+      color: #0e0e0e;
+    }
+
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 30px 20px;
       background: #1f1f1f;
       color: #888;
+    }
+
+    .social-icons {
+      margin-bottom: 15px;
+    }
+
+    .social-icons a {
+      color: #ccc;
+      margin: 0 10px;
+      font-size: 1.5em;
+      transition: color 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #facc15;
+    }
+
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.8em;
+      }
+      nav {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+      .videos iframe {
+        height: 200px;
+      }
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>Amal Kumar Tudu</h1>
     <nav>
@@ -91,20 +179,26 @@
   <section id="photos" class="section">
     <h2>Photography</h2>
     <div class="gallery">
-      <img src="https://via.placeholder.com/300x200.png?text=Photo+1" alt="Photo 1">
-      <img src="https://via.placeholder.com/300x200.png?text=Photo+2" alt="Photo 2">
-      <img src="https://via.placeholder.com/300x200.png?text=Photo+3" alt="Photo 3">
+      <img src="https://source.unsplash.com/random/300x200?landscape" alt="Photo 1">
+      <img src="https://source.unsplash.com/random/300x201?portrait" alt="Photo 2">
+      <img src="https://source.unsplash.com/random/300x202?nature" alt="Photo 3">
     </div>
   </section>
 
   <section id="about" class="section">
     <h2>About Me</h2>
     <p>
-      I’m a passionate editor, videographer, and photographer who loves storytelling through visuals. Whether it's a cinematic edit or a powerful photo frame, I believe every piece should speak on its own.
+      I’m a passionate editor, videographer, and photographer who loves storytelling through visuals.
+      Whether it's a cinematic edit or a powerful photo frame, I believe every piece should speak on its own.
     </p>
-  </section> 
-  
-  
+    <div class="skills">
+      <div class="skill-badge">Video Editing</div>
+      <div class="skill-badge">Color Grading</div>
+      <div class="skill-badge">Photography</div>
+      <div class="skill-badge">Motion Graphics</div>
+      <div class="skill-badge">Sound Design</div>
+    </div>
+  </section>
 
   <footer id="contact">
     <div class="social-icons">
@@ -114,7 +208,9 @@
       <a href="#"><i class="fab fa-facebook"></i></a>
     </div>
     <div class="copyright">
-    &copy; 2025 Amal Kumar Tudu | All rights reserved
+      &copy; 2025 Amal Kumar Tudu | All rights reserved
+    </div>
   </footer>
+
 </body>
 </html>
